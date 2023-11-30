@@ -57,7 +57,7 @@ def load_data(filename):
 #     # in case if the user does not provide any data
 #     default_df = pd.read_csv('dummieCodex.csv') 
 
-df2 = pd.read_csv("greencardpredict/11_30_23_Pred_Data_Final1.csv")
+df2 = pd.read_csv("C:\Users\kapia\greencard\greencardpredict\11_30_23_Pred_Data_Final1.csv")
 df2 = df2.drop('WAITING_TIMERANGE',axis=1)#columns = ['WAITING_TIMERANGE'])
 
 
