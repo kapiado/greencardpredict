@@ -32,7 +32,15 @@ st.title('Estimate Your Green Card Application Waiting Time')
 st.write("This app uses 12 inputs to predict the waiting time (months) for your green card application. Use the form below to get started!")
          # "a model built on the Palmer's Penguin's dataset. Use the form below" 
 
+df2 = pd.read_csv("pages/11_30_23_Pred_Data_Final1.csv")
+#print(df2)
+df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
+
+# Loading model and mapping pickle files
+dt_pickle = open('pages/11_30_23_rf_model_final.sav', 'rb') 
+dt_model = pickle.load(dt_pickle) 
+dt_pickle.close() 
 # Asking users to input their own data
 # penguin_file = st.file_uploader('Upload your own penguin data to train the model') 
 
@@ -197,15 +205,7 @@ with st.form(key='my_form'):
 #        'WAITING_TIMERANGE'
 
 
-df2 = pd.read_csv("11_30_23_Pred_Data_Final1.csv")
-#print(df2)
-df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
-
-# Loading model and mapping pickle files
-dt_pickle = open('11_30_23_rf_model_final.sav', 'rb') 
-dt_model = pickle.load(dt_pickle) 
-dt_pickle.close() 
 # NAICS_CODE,PW_LEVEL,PW_AMOUNT,WORK_STATE,COUNTRY_OF_CITIZENSHIP,EMPLOYER_NUM_EMPLOYEES,CLASS_OF_ADMISSION,JOB_EDUCATION,EXPERIENCE,EXPERIENCE_MONTHS,LAYOFF_IN_PAST_SIX_MONTHS,WORKER_EDUCATION,WAITING_TIMERANGE
 # NAICS_CODE,PW_LEVEL,PW_AMOUNT,WORK_STATE,COUNTRY_OF_CITIZENSHIP,EMPLOYER_NUM_EMPLOYEES,CLASS_OF_ADMISSION,JOB_EDUCATION,EXPERIENCE,EXPERIENCE_MONTHS,LAYOFF_IN_PAST_SIX_MONTHS,WORKER_EDUCATION,WAITING_TIMERANGE
 df3 = df2.copy()
