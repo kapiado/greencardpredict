@@ -41,10 +41,10 @@ st.write("This app uses 12 inputs to predict the waiting time (months) for your 
 # st.write("Please ensure that your data adheres to this specific format:")
 
 # Cache the dataframe so it's only loaded once
-@st.cache_data
-def load_data(filename):
-  df = pd.read_csv(filename)
-  return df
+# @st.cache_data
+# def load_data(filename):
+#   df = pd.read_csv(filename)
+#   return df
 
 # data_format = load_data('dummieCodes.csv')
 # st.dataframe(data_format, hide_index = True)
@@ -58,7 +58,7 @@ def load_data(filename):
 #     default_df = pd.read_csv('dummieCodex.csv') 
 
 df2 = pd.read_csv("11_30_23_Pred_Data_Final1.csv")
-#df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
+df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
 
 # Loading model and mapping pickle files
