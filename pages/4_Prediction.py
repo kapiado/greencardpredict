@@ -31,9 +31,9 @@ df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
 
 # Loading model and mapping pickle files
-dt_pickle = open("pages/11_30_23_rf_model_final.sav", 'rb') 
-dt_model = pickle.load(dt_pickle) 
-dt_pickle.close() 
+rf_pickle = open("pages/11_30_23_rf_model_final.sav", 'rb') 
+rf_model = pickle.load(rf_pickle) 
+rf_pickle.close() 
 # Asking users to input their own data
 # penguin_file = st.file_uploader('Upload your own penguin data to train the model') 
 
@@ -213,11 +213,11 @@ st.subheader("Predicting Waiting Time")
 
 
     # Using DT to predict() with encoded user data
-new_prediction_dt = dt_model.predict(user_encoded_df)
-new_prediction_prob_dt = dt_model.predict_proba(user_encoded_df).max()
+new_prediction_rf = rf_model.predict(user_encoded_df)
+new_prediction_prob_dt = rf_model.predict_proba(user_encoded_df).max()
 # Show the predicted cost range on the app
-st.write("Random Forest Prediction: {}".format(*new_prediction_dt))
-st.write("Prediction Probability: {:.0%}".format(new_prediction_prob_dt))
+st.write("Random Forest Prediction: {}".format(*new_prediction_rf))
+st.write("Prediction Probability: {:.0%}".format(new_prediction_prob_rf))
 
 # Showing additional items
 st.subheader("Prediction Performance")
