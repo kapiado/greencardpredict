@@ -57,12 +57,12 @@ def load_data(filename):
 #     # in case if the user does not provide any data
 #     default_df = pd.read_csv('dummieCodex.csv') 
 
-df2 = pd.read_csv("11_30_23_Pred_Data_Final1.csv")
+df2 = pd.read_csv("greencardpredict/11_30_23_Pred_Data_Final1.csv")
 df2 = df2.drop('WAITING_TIMERANGE',axis=1)#columns = ['WAITING_TIMERANGE'])
 
 
 # Loading model and mapping pickle files
-dt_pickle = open('11_30_23_rf_model_final.sav', 'rb') 
+dt_pickle = open('greencardpredict/11_30_23_rf_model_final.sav', 'rb') 
 dt_model = pickle.load(dt_pickle) 
 dt_pickle.close() 
 
