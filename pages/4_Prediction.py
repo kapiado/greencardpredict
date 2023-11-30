@@ -16,13 +16,6 @@ import pickle
 
 # Package to implement Decision Tree Model
 import sklearn
-from sklearn.tree import DecisionTreeClassifier
-
-# Package for data partitioning
-from sklearn.model_selection import train_test_split
-
-# Package to calculate f1_score
-from sklearn.metrics import f1_score
 
 import warnings
 warnings.filterwarnings('ignore')
