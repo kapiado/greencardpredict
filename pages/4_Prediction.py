@@ -57,15 +57,6 @@ st.write("This app uses 12 inputs to predict the waiting time (months) for your 
 #     # in case if the user does not provide any data
 #     default_df = pd.read_csv('dummieCodex.csv') 
 
-df2 = pd.read_csv("11_30_23_Pred_Data_Final1.csv")
-print(df2)
-#df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
-
-
-# Loading model and mapping pickle files
-dt_pickle = open('11_30_23_rf_model_final.sav', 'rb') 
-dt_model = pickle.load(dt_pickle) 
-dt_pickle.close() 
 
 # # If the file is provided, we need to clean it and train a model on it
 # # similar to what we did in the Jupyter notebook
@@ -206,6 +197,15 @@ with st.form(key='my_form'):
 #        'WAITING_TIMERANGE'
 
 
+df2 = pd.read_csv("11_30_23_Pred_Data_Final1.csv")
+#print(df2)
+df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
+
+
+# Loading model and mapping pickle files
+dt_pickle = open('11_30_23_rf_model_final.sav', 'rb') 
+dt_model = pickle.load(dt_pickle) 
+dt_pickle.close() 
 # NAICS_CODE,PW_LEVEL,PW_AMOUNT,WORK_STATE,COUNTRY_OF_CITIZENSHIP,EMPLOYER_NUM_EMPLOYEES,CLASS_OF_ADMISSION,JOB_EDUCATION,EXPERIENCE,EXPERIENCE_MONTHS,LAYOFF_IN_PAST_SIX_MONTHS,WORKER_EDUCATION,WAITING_TIMERANGE
 # NAICS_CODE,PW_LEVEL,PW_AMOUNT,WORK_STATE,COUNTRY_OF_CITIZENSHIP,EMPLOYER_NUM_EMPLOYEES,CLASS_OF_ADMISSION,JOB_EDUCATION,EXPERIENCE,EXPERIENCE_MONTHS,LAYOFF_IN_PAST_SIX_MONTHS,WORKER_EDUCATION,WAITING_TIMERANGE
 df3 = df2.copy()
