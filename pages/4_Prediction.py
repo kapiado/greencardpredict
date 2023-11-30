@@ -38,7 +38,7 @@ df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
 
 # Loading model and mapping pickle files
-dt_pickle = open('pages/11_30_23_rf_model_final.sav', 'rb') 
+dt_pickle = open("pages/11_30_23_rf_model_final.sav", 'rb') 
 dt_model = pickle.load(dt_pickle) 
 dt_pickle.close() 
 # Asking users to input their own data
