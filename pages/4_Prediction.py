@@ -14,8 +14,9 @@ import seaborn as sns           # Seaborn
 # Module to save and load Python objects to and from files
 import pickle 
 
-# Package to implement Decision Tree Model
+# Package to implement Random Forest Model
 import sklearn
+from sklearn.ensemble import RandomForestClassifier
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -29,9 +30,8 @@ df2 = pd.read_csv("pages/11_30_23_Pred_Data_Final1.csv")
 #print(df2)
 df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
-
 # Loading model and mapping pickle files
-rf_pickle = open("pages/11_30_23_rf_model_final.sav", 'rb') 
+rf_pickle = open("11_30_23_rf_model_final.sav", 'rb') 
 rf_model = pickle.load(rf_pickle) 
 rf_pickle.close() 
 # Asking users to input their own data
