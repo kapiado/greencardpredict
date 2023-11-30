@@ -12,7 +12,7 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Employer Profile")
 st.markdown("# Employer Profile")
 
-path = "C:/Users/kapia/multipage_app/HTML Files/"
+path = "HTML Files/"
 
 # def majorswait():
 #     HtmlFile = open("major_graph.html", 'r', encoding='utf-8')
