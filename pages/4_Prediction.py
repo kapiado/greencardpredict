@@ -17,6 +17,7 @@ import pickle
 # Package to implement Random Forest Model
 import sklearn
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 
 import warnings
 warnings.filterwarnings('ignore')
