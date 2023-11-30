@@ -58,7 +58,8 @@ st.write("This app uses 12 inputs to predict the waiting time (months) for your 
 #     default_df = pd.read_csv('dummieCodex.csv') 
 
 df2 = pd.read_csv("11_30_23_Pred_Data_Final1.csv")
-df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
+print(df2)
+#df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
 
 # Loading model and mapping pickle files
