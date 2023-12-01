@@ -215,7 +215,9 @@ cat_var = ['NAICS_CODE', 'PW_LEVEL','WORK_STATE','COUNTRY_OF_CITIZENSHIP','CLASS
 df3 = pd.get_dummies(df3, columns = cat_var)
 # Extract encoded user data
 user_encoded_df = df3.tail(1)
-user_encoded_df
+
+print(df3.loc[len(df3)] = [codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo])
+
 st.subheader("Predicting Waiting Time")
 
 
