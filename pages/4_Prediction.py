@@ -240,8 +240,8 @@ st.write("Prediction Probability: {:.0%}".format(new_prediction_prob_rf))
 st.subheader("Prediction Performance")
 tab1 = st.tabs(["Feature Importance"])
 # ONLY INCLUDE FEATURE IMPORTANCE
-# with tab1:
-#     st.image('dt_feature_imp.svg')
+with tab1:
+    st.image('NewFeatureImportance.svg')
 
 
 # # Dictionary to map category names to numerical values
