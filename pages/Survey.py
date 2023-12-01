@@ -46,7 +46,7 @@ with st.form("form1", clear_on_submit=True):
     
     if submit:
         # Append the submitted values to a CSV file
-        with open('submissions.csv', 'wb', newline='') as file:
+        with open('submissions.csv', 'a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([name,email,message,rating])
         st.success('Form submitted successfully!')
