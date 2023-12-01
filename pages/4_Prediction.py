@@ -240,7 +240,7 @@ st.write("Prediction Probability: {:.0%}".format(new_prediction_prob_rf))
 st.subheader("Prediction Performance")
 tab1 = st.tabs(["Feature Importance"])
 with tab1:
-    st.image('NewFeatureImportance.svg')
+    st.image("pages/NewFeatureImportance.svg")
 # ONLY INCLUDE FEATURE IMPORTANCE
 
 
