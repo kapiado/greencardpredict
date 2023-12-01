@@ -195,7 +195,7 @@ with st.form(key='my_form'):
     
     layoffInfo =  st.radio('Have you been affected from layoff(s) in the past six months?', options =["Yes","No"])
 
-    def showinfo():
+    def showinfo(codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo):
         print([codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo])
 
     submit = st.form_submit_button('Submit', on_click = showinfo())#args=(1,
@@ -206,7 +206,7 @@ with st.form(key='my_form'):
 #         'COUNTRY_OF_CITIZENSHIP', 'EMPLOYER_NUM_EMPLOYEES',
 #        'CLASS_OF_ADMISSION', 'JOB_EDUCATION', 'EXPERIENCE',
 #         'EXPERIENCE_MONTHS', 'LAYOFF_IN_PAST_SIX_MONTHS', 'WORKER_EDUCATION'])
-showinfo()
+showinfo(codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo)
 
 # NAICS_CODE,PW_LEVEL,PW_AMOUNT,WORK_STATE,COUNTRY_OF_CITIZENSHIP,EMPLOYER_NUM_EMPLOYEES,CLASS_OF_ADMISSION,JOB_EDUCATION,EXPERIENCE,EXPERIENCE_MONTHS,LAYOFF_IN_PAST_SIX_MONTHS,WORKER_EDUCATION,WAITING_TIMERANGE
 # NAICS_CODE,PW_LEVEL,PW_AMOUNT,WORK_STATE,COUNTRY_OF_CITIZENSHIP,EMPLOYER_NUM_EMPLOYEES,CLASS_OF_ADMISSION,JOB_EDUCATION,EXPERIENCE,EXPERIENCE_MONTHS,LAYOFF_IN_PAST_SIX_MONTHS,WORKER_EDUCATION,WAITING_TIMERANGE
