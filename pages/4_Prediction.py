@@ -195,11 +195,9 @@ with st.form(key='my_form'):
     
     layoffInfo =  st.radio('Have you been affected from layoff(s) in the past six months?', options =["Yes","No"])
 
-def showinfo():
-    print([codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo])
 
-    submit = st.form_submit_button('Submit', on_click=showinfo())#,args=(1,
-                    #[codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo]))
+    submit = st.form_submit_button('Submit', ,args=(1,
+                    [codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo]))
 # 
 # showinfo = pd.DataFrame(data = [codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo],columns=
 # ['NAICS_CODE', 'PW_LEVEL', 'PW_AMOUNT', 'WORK_STATE',
@@ -217,7 +215,7 @@ cat_var = ['NAICS_CODE', 'PW_LEVEL','WORK_STATE','COUNTRY_OF_CITIZENSHIP','CLASS
 df3 = pd.get_dummies(df3, columns = cat_var)
 # Extract encoded user data
 user_encoded_df = df3.tail(1)
-
+user_encoded_df
 st.subheader("Predicting Waiting Time")
 
 
