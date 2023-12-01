@@ -220,8 +220,9 @@ df4 = pd.DataFrame(columns = ['NAICS_CODE', 'PW_LEVEL', 'PW_AMOUNT', 'WORK_STATE
 #         'COUNTRY_OF_CITIZENSHIP', 'EMPLOYER_NUM_EMPLOYEES',
 #        'CLASS_OF_ADMISSION', 'JOB_EDUCATION', 'EXPERIENCE',
 #         'EXPERIENCE_MONTHS', 'LAYOFF_IN_PAST_SIX_MONTHS', 'WORKER_EDUCATION'])
-df4.loc[len(df4)]=[codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo])
-df4
+#df4.loc[len(df4)]=[codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo])
+df5 = pd.DataFrame(data = [codeInfo, wagelevelInfo, wageamountInfo, stateInfo, countryInfo, employeenumInfo,  admiclassInfo,  jobeducationInfo, expInfo, expmonthsInfo, layoffInfo, educationInfo])
+pd.concat([df4, df5])
 st.subheader("Predicting Waiting Time")
 
 
