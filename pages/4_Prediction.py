@@ -34,14 +34,6 @@ df2 = pd.read_csv("pages/11_30_23_Pred_Data_Final1.csv")
 #print(df2)
 df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
-import os 
-file_path = "pages/11_30_23_rf_model_final.pkl"
-if os.path.exists(file_path):
-    rf_pickle = open(file_path, 'rb')
-    rf_model = pickle.load(rf_pickle)
-    rf_pickle.close()
-else:
-    print("File does not exist.")
 
 # Loading model and mapping pickle files
 rf_pickle = open("pages/11_30_23_rf_model_final.pkl", 'rb') 
