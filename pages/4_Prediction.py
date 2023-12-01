@@ -39,7 +39,7 @@ rf_pickle = open("pages/11_30_23_rf_model_final.sav", 'rb')
 #rf_model = pd.read_pickle(r"pages/11_30_23_rf_model_final.sav")
 # with open("pages/11_30_23_rf_model_final.sav", 'rb') as f:
 #     rf_model = pickle.load(f)
-rf_model = joblib.load(rf_pickle) 
+rf_model = pickle.load(rf_pickle) 
 rf_pickle.close() 
 # Asking users to input their own data
 # penguin_file = st.file_uploader('Upload your own penguin data to train the model') 
