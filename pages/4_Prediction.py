@@ -221,9 +221,9 @@ user_encoded_df = df3.tail(1)
 st.subheader("Predicting Waiting Time")
 
 
-    # Using DT to predict() with encoded user data
+    # Using RF to predict() with encoded user data
 new_prediction_rf = rf_model.predict(user_encoded_df)
-new_prediction_prob_dt = rf_model.predict_proba(user_encoded_df).max()
+new_prediction_prob_rf = rf_model.predict_proba(user_encoded_df).max()
 # Show the predicted cost range on the app
 st.write("Random Forest Prediction: {}".format(*new_prediction_rf))
 st.write("Prediction Probability: {:.0%}".format(new_prediction_prob_rf))
