@@ -35,7 +35,7 @@ df2 = pd.read_csv("pages/11_30_23_Pred_Data_Final1.csv")
 df2.drop(['WAITING_TIMERANGE'], axis=1, inplace=True)
 
 # Loading model and mapping pickle files
-rf_pickle = open("pages/11_30_23_rf_model_final.sav", 'rb') 
+rf_pickle = open("pages/11_30_23_rf_model_final.pkl", 'rb') 
 #rf_model = pd.read_pickle(r"pages/11_30_23_rf_model_final.sav")
 # with open("pages/11_30_23_rf_model_final.sav", 'rb') as f:
 #     rf_model = pickle.load(f)
