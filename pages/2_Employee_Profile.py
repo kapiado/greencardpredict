@@ -18,26 +18,6 @@ c.write("The Employee Profile includes key information about the demographic of 
 
 path = "HTML Files/"
 
-def NAICSvsNumCases():
-    #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
-    HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    print(source_code)
-    components.html(source_code,height=1000, width=1000)
- 
-def WTvsNAICS():
-    HtmlFile = open(path+"AvgWTvsOcc.html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    print(source_code)
-    components.html(source_code,height=1000, width=1000)  
-
-# def WTvsNumCases():
-#     #HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine).html", 'r', encoding='utf-8') #v1
-#     HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine) (2).html", 'r', encoding='utf-8')
-#     source_code = HtmlFile.read() 
-#     print(source_code)
-#     #components.html(source_code)
-#     components.html(source_code,height=1000, width=1000)
 
 def WTvsYear():
     #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
@@ -52,6 +32,27 @@ def CasesvsYear():
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=500,width=700)
+
+def NAICSvsNumCases():
+    #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
+    HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    components.html(source_code)
+ 
+def WTvsNAICS():
+    HtmlFile = open(path+"AvgWTvsOcc.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    components.html(source_code)  
+
+# def WTvsNumCases():
+#     #HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine).html", 'r', encoding='utf-8') #v1
+#     HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine) (2).html", 'r', encoding='utf-8')
+#     source_code = HtmlFile.read() 
+#     print(source_code)
+#     #components.html(source_code)
+#     components.html(source_code,height=1000, width=1000)
 
     
 def WTvsSalary():
