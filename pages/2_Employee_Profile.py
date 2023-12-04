@@ -86,13 +86,13 @@ def HighestEducation():
     
 # tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
 tab1, tab2 = st.tabs(["Year","Industry"])
-with tab1:
-    CasesvsYear()
-    WTvsYear()
+    with tab1:
+        CasesvsYear()
+        WTvsYear()
 
-with tab2:
-     NAICSvsNumCases()
-     WTvsNAICS()
+    with tab2:
+        NAICSvsNumCases()
+        WTvsNAICS()
 
 # with tab3:
 #     nationality()
