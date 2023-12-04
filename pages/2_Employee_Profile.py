@@ -37,10 +37,12 @@ def NAICSvsNumCases():
     #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
     with open(path+'top10OccvsCases.html', 'r') as f:
         html_content = f.read()
-        st.markdown(
-        f'<div style="width:100%; height:auto;">{html_content}</div>',
-        unsafe_allow_html=True
-    )
+        print(html_content)
+        components.html(html_content,f'<div style="width:100%; height:auto;">{html_content}</div>',
+    width=800,  # Adjust width as needed
+    height=600,  # Adjust height as needed
+    scrolling=True  # Enable scrolling if content exceeds the specified height
+))
         
         #st.markdown(html_content, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
