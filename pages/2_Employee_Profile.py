@@ -34,10 +34,12 @@ def CasesvsYear():
     components.html(source_code,height=500,width=700)
 
 def NAICSvsNumCases():
-    HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    print(source_code)
-    st.markdown(source_code,unsafe_allow_html=True) 
+    # HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
+    # source_code = HtmlFile.read() 
+    # print(source_code)
+    # st.markdown(source_code,unsafe_allow_html=True) 
+
+    components.iframe("file:///C:/Users/kapia/greencard/greencardpredict/HTML%20Files/AgwtperState.html")
     # components.html(source_code,height=500,width=700)
         
         #st.markdown(html_content, unsafe_allow_html=True)
