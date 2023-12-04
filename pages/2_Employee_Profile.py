@@ -36,23 +36,10 @@ def CasesvsYear():
 def NAICSvsNumCases():
     #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
     with open(path+'top10OccvsCases.html', 'r') as f:
-        html_content = f.read()
-        javascript = """
-        <script>
-            function setIframeHeight() {
-                var iframe = document.getElementById('plotly_chart');
-                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-            }
-            window.onload = setIframeHeight;
-        </script>
-        """
-
-        # Combine HTML content and JavaScript
-        combined_html = f"{html_content}\n{javascript}"
-
-        # Display Plotly HTML content in Streamlit using components with dynamic height
-        components.html(combined_html, height=0)
-        #components.html(html_content,height=0)
+        HtmlFile = f.read()
+        source_code = HtmlFile.read() 
+        print(source_code)
+        components.html(source_code)#,height=500,width=700)
         
         #st.markdown(html_content, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
