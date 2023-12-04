@@ -37,7 +37,11 @@ def NAICSvsNumCases():
     #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
     with open(path+'top10OccvsCases.html', 'r') as f:
         html_content = f.read()
-        print(html_content)
+        st.markdown(
+        f'<div style="width:100%; height:auto;">{html_content}</div>',
+        unsafe_allow_html=True
+    )
+        
         #st.markdown(html_content, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
     # source_code = HtmlFile.read() 
