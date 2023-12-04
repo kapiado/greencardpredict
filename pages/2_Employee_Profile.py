@@ -84,10 +84,16 @@ def HighestEducation():
     print(source_code)
     components.html(source_code,height=600, width=1500)
 
-    
+
 # tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
 tab1, tab2, tab3 = st.tabs(["Year","Industry","Nationality"])
-
+st.markdown("""
+    <style>
+    [data-testid=column]:nth-of-type(1) [data-testid=stVerticalBlock]{
+        gap: 0rem;
+    }
+    </style>
+    """,unsafe_allow_html=True)
 
 with tab1:
     # Cache the dataframe so it's only loaded once
