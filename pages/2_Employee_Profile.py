@@ -38,7 +38,7 @@ def NAICSvsNumCases():
     with open(path+'top10OccvsCases.html', 'r') as f:
         html_content = f.read()
         print(html_content)
-        components.html(html_content,f'<div style="width:100%; height:auto;">{html_content}</div>',
+        components.html(f'<div style="width:100%; height:auto;">{html_content}</div>',
     width=800,  # Adjust width as needed
     height=600,  # Adjust height as needed
     scrolling=True  # Enable scrolling if content exceeds the specified height
