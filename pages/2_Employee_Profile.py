@@ -76,7 +76,7 @@ def nationality():
     HtmlFile = open(path+"WorldMapCases.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=600,width=1000)
+    components.html(source_code,height=600,width=500)
 
 def HighestEducation():
     HtmlFile = open(path+"HighestEducation.html", 'r', encoding='utf-8')
