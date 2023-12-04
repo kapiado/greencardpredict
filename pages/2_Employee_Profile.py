@@ -42,7 +42,7 @@ def NAICSvsNumCases():
     width=800,  # Adjust width as needed
     height=600,  # Adjust height as needed
     scrolling=True  # Enable scrolling if content exceeds the specified height
-))
+)
         
         #st.markdown(html_content, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
