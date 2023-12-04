@@ -18,6 +18,36 @@ c.write("The Employee Profile includes key information about the demographic of 
 
 path = "HTML Files/"
 
+html_content = """
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto-sizing HTML in Streamlit</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #content {
+      width: min-content;
+      height: min-content;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <!-- Your HTML content goes here -->
+    <h1>This is a heading</h1>
+    <p>Some text content...</p>
+  </div>
+</body>
+</html>
+"""
 
 def WTvsYear():
     #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
@@ -35,47 +65,6 @@ def CasesvsYear():
 
 def NAICSvsNumCases():
     #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
-    html_content = """
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Auto-sizing HTML in Streamlit</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    #content {
-      width: auto;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <div id="content">
-    <!-- Your HTML content goes here -->
-    <h1>This is a heading</h1>
-    <p>Some text content...</p>
-  </div>
-
-  <script>
-    // Calculate the content size and adjust the component size
-    function adjustSize() {
-      var content = document.getElementById('content');
-      var width = content.offsetWidth;
-      var height = content.offsetHeight;
-
-      // Set the component's size
-      parent.postMessage({ width: width, height: height }, '*');
-    }
-
-    // Adjust size initially and on window resize
-    adjustSize();
-    window.addEventListener('resize', adjustSize);
-  </script>
-</body>
-</html>
-"""
     with open(path+'top10OccvsCases.html', 'r') as f:
         html_content = f.read()
         print(html_content)
