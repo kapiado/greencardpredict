@@ -35,7 +35,7 @@ def CasesvsYear():
 
 def NAICSvsNumCases():
     #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
-    with open('top10OccvsCases.html', 'r') as f:
+    with open(path+'top10OccvsCases.html', 'r') as f:
         html_content = f.read()
         st.markdown(source_code, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
