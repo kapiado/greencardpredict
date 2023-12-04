@@ -84,29 +84,29 @@ def HighestEducation():
     components.html(source_code,height=600, width=1500)
 
     
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
-
+# tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
+tab1 = st.tabs['Year']
 with tab1:
     CasesvsYear()
     WTvsYear()
    
-with tab2:
-    NAICSvsNumCases()
-    WTvsNAICS()
-    WTvsNumCases()
+# with tab2:
+#     NAICSvsNumCases()
+#     WTvsNAICS()
+#     WTvsNumCases()
 
-with tab3:
-    nationality()
+# with tab3:
+#     nationality()
     
-with tab4:
-    NumCasesvsSalary()
-    WTvsSalary()
+# with tab4:
+#     NumCasesvsSalary()
+#     WTvsSalary()
     
-with tab5:
-    unitofpay()
+# with tab5:
+#     unitofpay()
     
-with tab6:
-    HighestEducation()
+# with tab6:
+#     HighestEducation()
 
    
     
