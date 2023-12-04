@@ -18,36 +18,6 @@ c.write("The Employee Profile includes key information about the demographic of 
 
 path = "HTML Files/"
 
-html_content = """
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Auto-sizing HTML in Streamlit</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #content {
-      width: min-content;
-      height: min-content;
-    }
-  </style>
-</head>
-<body>
-  <div id="content">
-    <!-- Your HTML content goes here -->
-    <h1>This is a heading</h1>
-    <p>Some text content...</p>
-  </div>
-</body>
-</html>
-"""
 
 def WTvsYear():
     #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
@@ -68,7 +38,10 @@ def NAICSvsNumCases():
     with open(path+'top10OccvsCases.html', 'r') as f:
         html_content = f.read()
         print(html_content)
-        components.html(html_content,height=0)
+        component = components.html(html_content, height=0)
+        content_height = component._height
+        components.html(html_content, height=content_height)
+        #components.html(html_content,height=0)
         
         #st.markdown(html_content, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
