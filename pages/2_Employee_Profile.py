@@ -89,12 +89,11 @@ def HighestEducation():
 tab1, tab2, tab3 = st.tabs(["Year","Industry","Nationality"])
 
 with tab1:
-    col1, col2 = st.columns(2)
     # Cache the dataframe so it's only loaded once
     #@st.cache_data
-    with col1:
+    with st.container():
         CasesvsYear()
-    with col2:
+    with st.container():
         WTvsYear()
 
 with tab2:
