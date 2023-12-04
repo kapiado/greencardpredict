@@ -72,7 +72,7 @@ def unitofpay():
     components.html(source_code,height=600)
     
 def nationality():
-    HtmlFile = open(path+"Nationality.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"WorldMapCases.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600,width=1000)
@@ -85,17 +85,17 @@ def HighestEducation():
 
     
 # tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
-tab1, tab2 = st.tabs(["Year","Industry"])
-    with tab1:
-        CasesvsYear()
-        WTvsYear()
+tab1, tab2, tab3 = st.tabs(["Year","Industry","Nationality"])
+with tab1:
+    CasesvsYear()
+    WTvsYear()
 
-    with tab2:
-        NAICSvsNumCases()
-        WTvsNAICS()
+with tab2:
+    NAICSvsNumCases()
+    WTvsNAICS()
 
-# with tab3:
-#     nationality()
+with tab3:
+    nationality()
     
 # with tab4:
 #     NumCasesvsSalary()
