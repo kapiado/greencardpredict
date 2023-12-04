@@ -48,7 +48,7 @@ def WTvsYear():
 
 def CasesvsYear():
     #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
-    HtmlFile = open(path+"Casesperyr.svg", 'r', encoding='utf-8')
+    HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
 
@@ -87,7 +87,8 @@ def HighestEducation():
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
 
 with tab1:
-   WTvsYear()
+    CasesvsYear()
+    WTvsYear()
    
 with tab2:
     NAICSvsNumCases()
