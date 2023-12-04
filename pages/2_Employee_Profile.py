@@ -20,24 +20,24 @@ path = "HTML Files/"
 
 def NAICSvsNumCases():
     #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
-    HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=1000, width=1000)
  
 def WTvsNAICS():
-    HtmlFile = open(path+"NAICSvsWaitingTime.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"AvgWTvsOcc.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=1000, width=1000)  
 
-def WTvsNumCases():
-    #HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine).html", 'r', encoding='utf-8') #v1
-    HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine) (2).html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    print(source_code)
-    #components.html(source_code)
-    components.html(source_code,height=1000, width=1000)
+# def WTvsNumCases():
+#     #HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine).html", 'r', encoding='utf-8') #v1
+#     HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine) (2).html", 'r', encoding='utf-8')
+#     source_code = HtmlFile.read() 
+#     print(source_code)
+#     #components.html(source_code)
+#     components.html(source_code,height=1000, width=1000)
 
 def WTvsYear():
     #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
@@ -85,15 +85,14 @@ def HighestEducation():
 
     
 # tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
-tab1 = st.tabs['Year']
+tab1, tab2 = st.tabs["Year","Industry"]
 with tab1:
     CasesvsYear()
     WTvsYear()
-   
-# with tab2:
-#     NAICSvsNumCases()
-#     WTvsNAICS()
-#     WTvsNumCases()
+
+with tab2:
+     NAICSvsNumCases()
+     WTvsNAICS()
 
 # with tab3:
 #     nationality()
