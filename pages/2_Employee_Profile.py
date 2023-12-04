@@ -41,7 +41,7 @@ def WTvsNumCases():
 
 def WTvsYear():
     #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
-    HtmlFile = open(path+"AverageWaitingTimebyYear (4).html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"Avgwtperyear.svg", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     #components.html(source_code,height=600)
