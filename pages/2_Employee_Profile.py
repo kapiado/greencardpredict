@@ -91,7 +91,7 @@ tab1, tab2, tab3 = st.tabs(["Year","Industry","Nationality"])
 
 with tab1:
     # Cache the dataframe so it's only loaded once
-    @st.cache_data
+    #@st.cache_data
     CasesvsYear()
     WTvsYear()
 
