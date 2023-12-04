@@ -34,12 +34,11 @@ def CasesvsYear():
     components.html(source_code,height=500,width=700)
 
 def NAICSvsNumCases():
-    #HtmlFile = open(path+"NAICSvsNumCases.html", 'r', encoding='utf-8') v1
-    with open(path+'top10OccvsCases.html', 'r') as f:
-        HtmlFile = f.read()
-        source_code = HtmlFile.read() 
-        print(source_code)
-        components.html(source_code)#,height=500,width=700)
+    HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    st.markdown(source_code,unsafe_allow_html=True) 
+    # components.html(source_code,height=500,width=700)
         
         #st.markdown(html_content, unsafe_allow_html=True)
     # HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
