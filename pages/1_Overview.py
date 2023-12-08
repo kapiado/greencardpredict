@@ -17,16 +17,28 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Overview")
 st.write("# Overview")
 
-path = "C:/Users/kapia/multipage_app/HTML Files/"
+path = "HTML Files/"
+
+# def cases():
+#     HtmlFile = open(path+"CasesReceived.html", 'r', encoding='utf-8')
+#     source_code = HtmlFile.read() 
+#     print(source_code)
+#     components.html(source_code,height=480)
+    
+# def avgwait():    
+#     HtmlFile = open(path+"AvgWaitingTime.html", 'r', encoding='utf-8')
+#     source_code = HtmlFile.read() 
+#     print(source_code)
+#     components.html(source_code,height=600)
 
 def cases():
-    HtmlFile = open(path+"CasesReceived.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=480)
     
 def avgwait():    
-    HtmlFile = open(path+"AvgWaitingTime.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"Avgwtperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
@@ -35,8 +47,8 @@ cases()
 avgwait()
 
 a = st.empty()
-a.write("The North American Industry Classification System (NAICS) is a standardized system used to classify business establishments based on their economic activity in Canada, Mexico, and the United States. It provides a hierarchical structure that groups businesses into various sectors, subsectors, industry groups, and industries. The NAICS code is a unique numerical identifier assigned to each business entity, allowing for consistent and comparable data collection and analysis across different industries and regions.")
-
+# a.write("The North American Industry Classification System (NAICS) is a standardized system used to classify business establishments based on their economic activity in Canada, Mexico, and the United States. It provides a hierarchical structure that groups businesses into various sectors, subsectors, industry groups, and industries. The NAICS code is a unique numerical identifier assigned to each business entity, allowing for consistent and comparable data collection and analysis across different industries and regions.")
+a.write(f"The **{U.S. immigration system}** faces a severe **{backlog}** of applications leading to delays for applications, with a backlog of approximately with **{2.6 million}** immigration applications in 2022.")
 # st.header("Columns Used")
 # st.markdown(
 #     """
