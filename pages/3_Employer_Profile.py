@@ -43,14 +43,14 @@ def NumCasesvsExpReq():
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=500)
-    st.caption("Example text")
+
 
 @st.cache_data
 def NumCasesvsNumEmp():
     HtmlFile = open(path+"CasesvsNumEmp (2).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=600,width=1000)
+    components.html(source_code,height=600,width=1200)
 
 @st.cache_data
 def WTvsNumEmp():
@@ -83,6 +83,7 @@ tab1, tab2, tab3 = st.tabs(["Experience Required","Number of Employees","Employe
 with tab1:
    a = st.empty()
    a.write("'Experience Required' identifies whether experience in the job offered by the employer is a requirement.")
+   st.caption("Example text")
    NumCasesvsExpReq()
    #WTvsExpReq()
    #st.image("https://static.streamlit.io/examples/cat.jpg")
@@ -90,12 +91,12 @@ with tab1:
 with tab2:
     a = st.empty()
     a.write("'Number of Employees' identifies the total number of employees employed by the employer.")
-    NumCasesvsNumEmp()
     st.caption("Employers that have 0-100 employees have had the highest average number of cases received.")
+    NumCasesvsNumEmp()
     #WTvsNumEmp()
    #st.image("https://static.streamlit.io/examples/dog.jpg")
    
 with tab3:
-    NumCasesvsJobState()
     st.caption("California has the highest average number of cases received.")
+    NumCasesvsJobState()
     #WTvsJobState()
