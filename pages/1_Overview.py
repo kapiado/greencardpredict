@@ -30,13 +30,14 @@ path = "HTML Files/"
 #     source_code = HtmlFile.read() 
 #     print(source_code)
 #     components.html(source_code,height=600)
-
+@st.cache_data
 def cases():
     HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=480)
     
+@st.cache_data
 def avgwait():    
     HtmlFile = open(path+"Avgwtperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
