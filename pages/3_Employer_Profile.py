@@ -82,7 +82,8 @@ tab1, tab2, tab3 = st.tabs(["Experience Required","Number of Employees","Employe
 
 with tab1:
    a = st.empty()
-   a.write("'Experience Required' identifies whether experience in the job offered by the employer is a requirement. Applications that required 24 months of experience had the highest number of cases received.")
+   a.write("'Experience Required' identifies whether experience in the job offered by the employer is a requirement.")
+   st.caption("Applications that required :blue[24 months of experience] had the highest number of cases received.")
    NumCasesvsExpReq()
    #WTvsExpReq()
    #st.image("https://static.streamlit.io/examples/cat.jpg")
@@ -90,7 +91,7 @@ with tab1:
 with tab2:
     a = st.empty()
     a.write("'Number of Employees' identifies the total number of employees employed by the employer.")
-    st.caption("Employers that have 0-100 employees have had the highest average number of cases received.")
+    st.caption(":blue[Employers that have 0-100 employees] have had the highest average number of cases received.")
     NumCasesvsNumEmp()
     #WTvsNumEmp()
    #st.image("https://static.streamlit.io/examples/dog.jpg")
@@ -98,6 +99,6 @@ with tab2:
 with tab3:
     a = st.empty()
     a.write("'Employer Location' identifies the U.S. state of the employer's primary worksite location.")
-    st.caption("California has the highest average number of cases received.")
+    st.caption(":blue[California] has the highest average number of cases received.")
     NumCasesvsJobState()
     #WTvsJobState()
