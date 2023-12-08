@@ -35,6 +35,7 @@ def WTvsExpReq():
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
+    
 
 @st.cache_data
 def NumCasesvsExpReq():
@@ -42,13 +43,14 @@ def NumCasesvsExpReq():
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
+    st.caption("Example text")
 
 @st.cache_data
 def NumCasesvsNumEmp():
     HtmlFile = open(path+"CasesvsNumEmp (2).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=600,width=800)
+    components.html(source_code,height=600,width=1000)
 
 @st.cache_data
 def WTvsNumEmp():
@@ -81,7 +83,8 @@ tab1, tab2, tab3 = st.tabs(["Experience Required","Number of Employees","Employe
 with tab1:
    a = st.empty()
    a.write("'Experience Required' identifies whether experience in the job offered by the employer is a requirement.")
-   WTvsExpReq()
+   NumCasesvsExpReq()
+   #WTvsExpReq()
    #st.image("https://static.streamlit.io/examples/cat.jpg")
 
 with tab2:
