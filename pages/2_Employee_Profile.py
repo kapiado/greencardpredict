@@ -40,8 +40,8 @@ def Top10OccvsCases():
 def AvgWTvsOcc():
     HtmlFile = open(path+"AvgWTvsOcc.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
-    #print(source_code)
-    st.markdown(source_code,height=500,width=700)  
+    print(source_code)
+    components.html(source_code,height=500,width=700)  
 
 # def WTvsNumCases():
 #     #HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine).html", 'r', encoding='utf-8') #v1
