@@ -68,10 +68,10 @@ def NumCasesvsJobState():
     
 @st.cache_data   
 def WTvsJobState():
-    HtmlFile = open(path+"WTvsJobState.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"AvgwtperState.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=800,width=1000)
+    components.html(source_code,height=600)
 
 
 

@@ -19,30 +19,44 @@ st.write("# Overview")
 
 path = "HTML Files/"
 
+@st.cache_data
+def cases():
+    HtmlFile = open(path+"CasesReceived.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    components.html(source_code,height=480)
+
+@st.cache_data
+def avgwait():    
+    HtmlFile = open(path+"AvgWaitingTime.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    components.html(source_code,height=600)
+# def Avgwtperyr():
+#     HtmlFile = open(path+"Avgwtperyr.html", 'r', encoding='utf-8')
+#     source_code = HtmlFile.read() 
+#     print(source_code)
+#     components.html(source_code,height=500, width=700)
+
+# def Casesperyr():
+#     HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
+#     source_code = HtmlFile.read() 
+#     print(source_code)
+#     components.html(source_code,height=500,width=700)
+
+# @st.cache_data
 # def cases():
-#     HtmlFile = open(path+"CasesReceived.html", 'r', encoding='utf-8')
+#     HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
 #     source_code = HtmlFile.read() 
 #     print(source_code)
 #     components.html(source_code,height=480)
     
+# @st.cache_data
 # def avgwait():    
-#     HtmlFile = open(path+"AvgWaitingTime.html", 'r', encoding='utf-8')
+#     HtmlFile = open(path+"Avgwtperyr.html", 'r', encoding='utf-8')
 #     source_code = HtmlFile.read() 
 #     print(source_code)
 #     components.html(source_code,height=600)
-@st.cache_data
-def cases():
-    HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    print(source_code)
-    components.html(source_code,height=480)
-    
-@st.cache_data
-def avgwait():    
-    HtmlFile = open(path+"Avgwtperyr.html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    print(source_code)
-    components.html(source_code,height=600)
 
 a = st.empty()
 # a.write("The North American Industry Classification System (NAICS) is a standardized system used to classify business establishments based on their economic activity in Canada, Mexico, and the United States. It provides a hierarchical structure that groups businesses into various sectors, subsectors, industry groups, and industries. The NAICS code is a unique numerical identifier assigned to each business entity, allowing for consistent and comparable data collection and analysis across different industries and regions.")
