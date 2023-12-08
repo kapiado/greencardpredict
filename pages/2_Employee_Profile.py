@@ -87,12 +87,8 @@ def HighestEducation():
 tab1, tab2, tab3 = st.tabs(["Year","Industry","Nationality"])
 # container = st.container(border=True)
 with tab1:
-    # Cache the dataframe so it's only loaded once
-    #@st.cache_data
-    # container.CasesvsYear()
-    # container.WTvsYear()
-    CasesvsYear()
-    WTvsYear()
+    Avgwtperyr()
+    Casesperyr()
 
 with tab2:
     NAICSvsNumCases()
