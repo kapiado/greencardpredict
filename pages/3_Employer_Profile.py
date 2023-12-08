@@ -83,7 +83,7 @@ tab1, tab2, tab3 = st.tabs(["Experience Required","Number of Employees","Employe
 with tab1:
    a = st.empty()
    a.write("'Experience Required' identifies whether experience in the job offered by the employer is a requirement.")
-   st.caption("Applications that required 24 months of experience had the highest number of cases received.")
+   st.text("Applications that required 24 months of experience had the highest number of cases received.")
    NumCasesvsExpReq()
    #WTvsExpReq()
    #st.image("https://static.streamlit.io/examples/cat.jpg")
