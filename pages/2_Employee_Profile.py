@@ -74,13 +74,13 @@ def nationality():
     HtmlFile = open(path+"TopCountriesByCases.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=700)
+    components.html(source_code,height=500)
 
 def nationality2():
     HtmlFile = open(path+"TopCountriesByWaitingTime.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=700)
+    components.html(source_code,height=700,width=700)
 
 def HighestEducation():
     HtmlFile = open(path+"HighestEducation.html", 'r', encoding='utf-8')
