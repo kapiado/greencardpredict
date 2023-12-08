@@ -16,7 +16,10 @@ st.subheader("Enter details below:")
 st.session_state.name = st.session_state.get('name', 'Name')
 st.session_state.anon = st.session_state.get('anon', 'Anonymous')
 
-path = "HTML Files/"
+csv_file = 'submissions.csv'
+if os.path.exists(csv_file):
+    # read from file
+    results_option1 = pd.read_csv(csv_file, index_col=False)
 
 with st.form("form1", clear_on_submit=True):
     # name = st.radio(
@@ -45,10 +48,12 @@ with st.form("form1", clear_on_submit=True):
     submit = st.form_submit_button("Submit")
     
     if submit:
+        results_option1.loc[len(results_option1)] = [name,email,message,rating]
+        results_option1.to_csv(csv_file, index=False)
         # Append the submitted values to a CSV file
-        with open(path+'submissions.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([name,email,message,rating])
+        # with open('submissions.csv', 'a', newline='') as file:
+        #     writer = csv.writer(file)
+        #     writer.writerow([name,email,message,rating])
         st.success('Form submitted successfully!')
         
 def main():
