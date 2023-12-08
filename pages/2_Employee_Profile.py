@@ -100,8 +100,9 @@ with tab2:
     AvgWTvsOcc()
 
 with tab3:
-    nationality()
     nationality2()
+    nationality()
+
     
 # with tab4:
 #     NumCasesvsSalary()

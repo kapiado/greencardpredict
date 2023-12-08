@@ -16,7 +16,7 @@ st.subheader("Enter details below:")
 st.session_state.name = st.session_state.get('name', 'Name')
 st.session_state.anon = st.session_state.get('anon', 'Anonymous')
 
-
+path = "HTML Files/"
 
 with st.form("form1", clear_on_submit=True):
     # name = st.radio(
@@ -46,7 +46,7 @@ with st.form("form1", clear_on_submit=True):
     
     if submit:
         # Append the submitted values to a CSV file
-        with open('submissions.csv', 'a', newline='') as file:
+        with open(path+'submissions.csv', 'a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([name,email,message,rating])
         st.success('Form submitted successfully!')
