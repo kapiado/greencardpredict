@@ -55,6 +55,8 @@ with st.form("form1", clear_on_submit=True):
         #     writer = csv.writer(file)
         #     writer.writerow([name,email,message,rating])
         st.success('Form submitted successfully!')
+
+results_option1
         
 def main():
     pass
