@@ -27,7 +27,7 @@ path = "HTML Files/"
 #     components.html(source_code,height=600)
 
 a = st.empty()
-a.write("The Employer Profile includes key information about the employers in our dataset, who assist in the green card application process in the United States. This consists of the experience required for a job position, number of employees per application, and location (U.S. state/territory).") #major requirements
+a.write("The Employer Profile includes key information about the employers in our dataset, who assist in the green card application process in the United States. This consists of the experience required for a job position, number of employees hired by the employer, and location (U.S. state/territory).") #major requirements
 
 @st.cache_data     
 def WTvsExpReq():
@@ -48,7 +48,7 @@ def NumCasesvsNumEmp():
     HtmlFile = open(path+"CasesvsNumEmp (2).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=600)
+    components.html(source_code,height=600,width=800)
 
 @st.cache_data
 def WTvsNumEmp():
@@ -88,9 +88,11 @@ with tab2:
     a = st.empty()
     a.write("'Number of Employees' identifies the total number of employees employed by the employer.")
     NumCasesvsNumEmp()
+    st.caption("Employers that have 0-100 employees have had the highest average number of cases received.")
     #WTvsNumEmp()
    #st.image("https://static.streamlit.io/examples/dog.jpg")
    
 with tab3:
     NumCasesvsJobState()
+    st.caption("California has the highest average number of cases received.")
     #WTvsJobState()
