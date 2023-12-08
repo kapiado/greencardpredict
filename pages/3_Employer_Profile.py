@@ -62,7 +62,7 @@ def NumCasesvsJobState():
     HtmlFile = open(path+"NumCasesvsJobState (4).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=600)
+    components.html(source_code,height=600,width=800)
     
 @st.cache_data   
 def WTvsJobState():
@@ -88,9 +88,9 @@ with tab2:
     a = st.empty()
     a.write("'Number of Employees' identifies the total number of employees employed by the employer.")
     NumCasesvsNumEmp()
-    WTvsNumEmp()
+    #WTvsNumEmp()
    #st.image("https://static.streamlit.io/examples/dog.jpg")
    
 with tab3:
     NumCasesvsJobState()
-    WTvsJobState()
+    #WTvsJobState()
