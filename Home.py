@@ -56,10 +56,12 @@ c.write('The immigration backlog is a result of the accumulation of immigration 
 #new line and research objectives content
 st.write("")
 st.header('Research Objectives')
-st.subheader('Descriptive')
-st.write("We will create a novel analytical framework to address immigration issues and provide essential information for aspiring permanent residents in the US. These analytical frameworks will have a decision support system that people can leverage to make better decisions, with a data analytics page displaying trends and insights from immigration data, helping users understand the system and manage expectations.")
-st.subheader('Predictive')
-st.write("The predictive analytics page will allow users to input data and receive personalized estimates on their immigration timeline based on a variety of factors. Through this approach, the DSS will empower applicants and promote a transparent and efficient immigration process.")
+st.write("1. Enhance **transparency**, **reliability**, and **predictability** in the immigration process for EB-2 future applicants.​")
+st.write("2. Implement **Machine Learning** models leveraging historical data to forecast green card processing times, providing applicants with **estimated wait times** from eligible priority date to approval of green card.")
+#st.subheader('Descriptive')
+#st.write("We will create a novel analytical framework to address immigration issues and provide essential information for aspiring permanent residents in the US. These analytical frameworks will have a decision support system that people can leverage to make better decisions, with a data analytics page displaying trends and insights from immigration data, helping users understand the system and manage expectations.")
+# st.subheader('Predictive')
+# st.write("The predictive analytics page will allow users to input data and receive personalized estimates on their immigration timeline based on a variety of factors. Through this approach, the DSS will empower applicants and promote a transparent and efficient immigration process.")
 
 #new line and team intro
 st.write("")

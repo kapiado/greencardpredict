@@ -65,6 +65,14 @@ a.write("The **U.S. immigration system** faces a severe **backlog** of applicati
 cases()
 avgwait()
 
+#new line and research objectives content
+st.write("")
+st.header('Research Objectives')
+st.subheader('Descriptive')
+st.write("We will create a novel analytical framework to address immigration issues and provide essential information for aspiring permanent residents in the US. These analytical frameworks will have a decision support system that people can leverage to make better decisions, with a data analytics page displaying trends and insights from immigration data, helping users understand the system and manage expectations.")
+st.subheader('Predictive')
+st.write("The predictive analytics page will allow users to input data and receive personalized estimates on their immigration timeline based on a variety of factors. Through this approach, the DSS will empower applicants and promote a transparent and efficient immigration process.")
+
 # st.header("Columns Used")
 # st.markdown(
 #     """
