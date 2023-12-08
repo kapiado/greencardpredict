@@ -37,7 +37,7 @@ def Top10OccvsCases():
     print(source_code)
     components.html(source_code,height=500, width=1000)
  
-def WTvsNAICS():
+def AvgWTvsOcc():
     HtmlFile = open(path+"AvgWTvsOcc.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     #print(source_code)
@@ -84,15 +84,14 @@ def HighestEducation():
 
 
 # tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Year","Industry","Nationality","Salary","Unit of Pay","Highest Education"])
-tab1, tab2, tab3 = st.tabs(["Year","Industry","Nationality"])
+tab1, tab2, tab3 = st.tabs(["Year","Industry/Occupation","Nationality"])
 # container = st.container(border=True)
 with tab1:
     Avgwtperyr()
     Casesperyr()
 
 with tab2:
-    NAICSvsNumCases()
-    WTvsNAICS()
+    AvgWTvsOcc()
 
 with tab3:
     nationality()
