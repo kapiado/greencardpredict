@@ -71,7 +71,13 @@ def unitofpay():
     components.html(source_code,height=600)
     
 def nationality():
-    HtmlFile = open(path+"WorldMapCases.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"TopCountriesByCases.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    components.html(source_code,height=700)
+
+def nationality2():
+    HtmlFile = open(path+"TopCountriesByWaitingTime.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=700)
@@ -95,6 +101,7 @@ with tab2:
 
 with tab3:
     nationality()
+    nationality2()
     
 # with tab4:
 #     NumCasesvsSalary()
