@@ -42,7 +42,7 @@ def NumCasesvsExpReq():
     HtmlFile = open(path+"CasesvsExp.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code,height=200)
+    components.html(source_code,height=400)
     st.caption("Example text")
 
 @st.cache_data
