@@ -43,12 +43,13 @@ def avgwait():
     print(source_code)
     components.html(source_code,height=600)
 
-cases()
-avgwait()
-
 a = st.empty()
 # a.write("The North American Industry Classification System (NAICS) is a standardized system used to classify business establishments based on their economic activity in Canada, Mexico, and the United States. It provides a hierarchical structure that groups businesses into various sectors, subsectors, industry groups, and industries. The NAICS code is a unique numerical identifier assigned to each business entity, allowing for consistent and comparable data collection and analysis across different industries and regions.")
 a.write("The **U.S. immigration system** faces a severe **backlog** of applications leading to delays for applications, with a backlog of approximately with **2.6 million** immigration applications in 2022.")
+
+cases()
+avgwait()
+
 # st.header("Columns Used")
 # st.markdown(
 #     """
