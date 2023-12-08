@@ -19,21 +19,19 @@ c.write("The Employee Profile includes key information about the demographic of 
 path = "HTML Files/"
 
 
-def WTvsYear():
-    #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
+def Avgwtperyr():
     HtmlFile = open(path+"Avgwtperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=500, width=700)
 
-def CasesvsYear():
-    #HtmlFile = open(path+"AverageWaitingTimebyYear.html", 'r', encoding='utf-8') v1
+def Casesperyr():
     HtmlFile = open(path+"Casesperyr.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=500,width=700)
 
-def NAICSvsNumCases():
+def Top10OccvsCases():
     HtmlFile = open(path+"top10OccvsCases.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
@@ -43,7 +41,7 @@ def WTvsNAICS():
     HtmlFile = open(path+"AvgWTvsOcc.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     #print(source_code)
-    st.markdown(source_code,unsafe_allow_html=True)  
+    st.markdown(source_code,height=500,width=700)  
 
 # def WTvsNumCases():
 #     #HtmlFile = open(path+"AvgWTvsNumCasesperIndustry(RedLine).html", 'r', encoding='utf-8') #v1
@@ -55,7 +53,7 @@ def WTvsNAICS():
 
     
 def WTvsSalary():
-    HtmlFile = open(path+"WTvsEmployeeSalary (3).html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"WTvsEmployeeSalary.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=500)

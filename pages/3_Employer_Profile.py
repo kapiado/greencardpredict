@@ -42,7 +42,7 @@ def NumCasesvsExpReq():
     components.html(source_code,height=600)
  
 def NumCasesvsNumEmp():
-    HtmlFile = open(path+"CasesvsNumEmp.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"CasesvsNumEmp (2).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
@@ -54,7 +54,7 @@ def WTvsNumEmp():
     components.html(source_code,height=600)
 
 def NumCasesvsJobState():
-    HtmlFile = open(path+"NumCasesvsJobState.html", 'r', encoding='utf-8')
+    HtmlFile = open(path+"NumCasesvsJobState (4).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
