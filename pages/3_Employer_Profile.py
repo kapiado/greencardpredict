@@ -28,38 +28,43 @@ path = "HTML Files/"
 
 a = st.empty()
 a.write("The Employer Profile includes key information about the employers in our dataset, who assist in the green card application process in the United States. This consists of the experience required for a job position, number of employees per application, and location (U.S. state/territory).") #major requirements
-     
+
+@st.cache_data     
 def WTvsExpReq():
     HtmlFile = open(path+"WTvsExpReq (2).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
-    
+
+@st.cache_data
 def NumCasesvsExpReq():
     HtmlFile = open(path+"CasesvsExp.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
- 
+
+@st.cache_data
 def NumCasesvsNumEmp():
     HtmlFile = open(path+"CasesvsNumEmp (2).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
 
+@st.cache_data
 def WTvsNumEmp():
     HtmlFile = open(path+"WTvsNumEmp.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
 
+@st.cache_data
 def NumCasesvsJobState():
     HtmlFile = open(path+"NumCasesvsJobState (4).html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code,height=600)
     
-    
+@st.cache_data   
 def WTvsJobState():
     HtmlFile = open(path+"WTvsJobState.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
