@@ -16,10 +16,10 @@ st.subheader("Enter details below:")
 st.session_state.name = st.session_state.get('name', 'Name')
 st.session_state.anon = st.session_state.get('anon', 'Anonymous')
 
-csv_file = 'submissions.csv'
-if os.path.exists(csv_file):
-    # read from file
-    results_option1 = pd.read_csv(csv_file, index_col=False)
+# csv_file = 'submissions.csv'
+# if os.path.exists(csv_file):
+#     # read from file
+#     results_option1 = pd.read_csv(csv_file, index_col=False)
 
 with st.form("form1", clear_on_submit=True):
     # name = st.radio(
